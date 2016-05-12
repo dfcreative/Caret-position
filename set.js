@@ -12,7 +12,10 @@ module.exports = function(input, start, end) {
 
 	if (input.setSelectionRange) {
 		input.focus();
-		input.setSelectionRange(start, end);
+		// http://stackoverflow.com/a/11724161
+		window.setTimeout(function() {
+			input.setSelectionRange(start, end);
+		},0);
 	} else {
 		var range = input.createTextRange();
 		range.collapse(true);
