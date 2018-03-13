@@ -38,9 +38,12 @@ module.exports = function (input) {
 			result.caret = result.end;
 		}
 	} else {
+		var isNumber = input.type === 'number'
+		if (isNumber) input.type = 'text'
 		result.start = input.selectionStart;
 		result.end = input.selectionEnd;
 		result.caret = result.end;
+		if (isNumber) input.type = 'number'
 	}
 	if (result.start < 0) {
 		 result = { start:0, end:0, caret:0 };

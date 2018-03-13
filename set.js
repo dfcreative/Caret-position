@@ -10,6 +10,9 @@
 module.exports = function(input, start, end) {
 	if (end === undefined) { end = start; }
 
+	var isNumber = input.type === 'number'
+
+	if (isNumber) input.type = 'text'
 	if (input.setSelectionRange) {
 		input.focus();
 		input.setSelectionRange(start, end);
@@ -20,4 +23,5 @@ module.exports = function(input, start, end) {
 		range.moveStart('character', end);
 		range.select();
 	}
+	if (isNumber) input.type = 'number'
 };

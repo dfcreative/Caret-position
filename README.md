@@ -1,6 +1,6 @@
-# caret-position2 [![Code Climate](https://codeclimate.com/github/kudago/Caret-position/badges/gpa.svg)](https://codeclimate.com/github/kudago/Caret-position) [![License](http://img.shields.io/:license-mit-blue.svg)](/LICENSE)
+# caret-position2
 
-Get and set the user's text selection on an input or text area. Just refactored conventional _caret-position_.
+Get and set the user's text selection on an input or text area.
 
 `$ npm install caret-position2`
 
